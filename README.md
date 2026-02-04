@@ -75,6 +75,17 @@ Open this address in your browser to view the application.
 
 ---
 
+## 🔐 Demo User Credentials
+
+You can use the following example user to log in to the application:
+
+```
+Username: donore
+Password: ewedon
+```
+
+---
+
 ## 🧠 How It Works
 
 - **main.go** initializes the HTTP server and routes.
