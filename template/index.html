@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoShop - Best Goods for Lowest Prices</title>
+
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">GoShop</div>
+
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="/cart">Cart</a>
+        <a href="/logout">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <body>
+    <div class="container">
+      <div class="grid">
+        {{range .}}
+        <div class="card">
+          <img src="{{.Image}}" alt="{{.Title}}" />
+          <div class="card-body">
+            <div class="title">{{.Title}}</div>
+            <div class="category">{{.Category}}</div>
+            <div class="description">{{.Description}}</div>
+            <div class="price">{{printf "%.2f" .Price}} $</div>
+            <button type="submit" class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        {{end}}
+      </div>
+    </div>
+  </body>
+</html>
